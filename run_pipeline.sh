@@ -13,6 +13,10 @@ module load miniconda/24.7.1 CUDA/12.6.0
 eval "$(conda shell.bash hook)"
 conda activate vial_scan
 
+# Redirect caches away from home (quota limited) to scratch
+export TRITON_CACHE_DIR=/nfs/roberts/scratch/pi_cwd7/cwd7/.triton_cache
+export HF_HOME=/nfs/roberts/scratch/pi_cwd7/cwd7/.cache/huggingface
+
 # Start vLLM server in background
 vllm serve Qwen/Qwen2.5-VL-72B-Instruct \
     --port 8000 \
