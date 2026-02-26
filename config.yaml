@@ -1,0 +1,7 @@
+input_dir: images                        # Root directory; script recurses into subdirectories
+output_file: output/results.xlsx
+model: Qwen/Qwen2.5-VL-72B-Instruct
+vllm_base_url: http://localhost:8000/v1
+max_image_size: 1500                     # Resize longest edge to this in pixels before sending
+batch_size: 8                            # Concurrent requests to vLLM
+log_file: output/extraction.log
