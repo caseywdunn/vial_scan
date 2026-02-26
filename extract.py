@@ -163,11 +163,14 @@ async def process_all(image_paths: list[Path], config: dict) -> list[dict]:
                 }
 
             dm_from_image = extracted.get("datamatrix_integer")
-            datamatrix_match = (
-                dm_from_image == filename_integer
-                if dm_from_image is not None and filename_integer is not None
-                else None
-            )
+            try:
+                datamatrix_match = (
+                    int(dm_from_image) == int(filename_integer)
+                    if dm_from_image is not None and filename_integer is not None
+                    else None
+                )
+            except (ValueError, TypeError):
+                datamatrix_match = False
 
             return {
                 "image_file": str(path),

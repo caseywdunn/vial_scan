@@ -1,0 +1,195 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+/apps/custom/lmod/8.7.48/init/bash: line 169: conda: command not found
+Waiting for vLLM server...
+INFO 02-26 16:29:02 [scheduler.py:216] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:29:02 [api_server.py:1977] vLLM API server version 0.11.2
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:29:02 [utils.py:253] non-default args: {'model_tag': 'Qwen/Qwen2.5-VL-72B-Instruct', 'model': 'Qwen/Qwen2.5-VL-72B-Instruct', 'max_model_len': 8192, 'quantization': 'fp8', 'limit_mm_per_prompt': {'image': 1}}
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:29:02 [model.py:631] Resolved architecture: Qwen2_5_VLForConditionalGeneration
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:29:02 [model.py:1745] Using max model len 8192
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:29:03 [scheduler.py:216] Chunked prefill is enabled with max_num_batched_tokens=8192.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:10 [core.py:93] Initializing a V1 LLM engine (v0.11.2) with config: model='Qwen/Qwen2.5-VL-72B-Instruct', speculative_config=None, tokenizer='Qwen/Qwen2.5-VL-72B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=fp8, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=Qwen/Qwen2.5-VL-72B-Instruct, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'level': None, 'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::kda_attention', 'vllm::sparse_attn_indexer'], 'compile_mm_encoder': False, 'use_inductor': None, 'compile_sizes': [], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {}, 'max_cudagraph_capture_size': 512, 'local_cache_dir': None}
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:12 [parallel_state.py:1208] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://10.18.20.41:51359 backend=nccl
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:12 [parallel_state.py:1394] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:16 [gpu_model_runner.py:3259] Starting to load model Qwen/Qwen2.5-VL-72B-Instruct...
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Exception in thread Thread-1 (_report_usage_worker):
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   File "/home/cwd7/.conda/envs/vial_scan/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m     self.run()
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   File "/home/cwd7/.conda/envs/vial_scan/lib/python3.11/threading.py", line 982, in run
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   File "/home/cwd7/.conda/envs/vial_scan/lib/python3.11/site-packages/vllm/usage/usage_lib.py", line 174, in _report_usage_worker
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m     self._report_usage_once(model_architecture, usage_context, extra_kvs)
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   File "/home/cwd7/.conda/envs/vial_scan/lib/python3.11/site-packages/vllm/usage/usage_lib.py", line 258, in _report_usage_once
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m     self._write_to_file(data)
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   File "/home/cwd7/.conda/envs/vial_scan/lib/python3.11/site-packages/vllm/usage/usage_lib.py", line 289, in _write_to_file
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m     with open(_USAGE_STATS_JSON_PATH, "a") as f:
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m OSError: [Errno 122] Disk quota exceeded
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m /home/cwd7/.conda/envs/vial_scan/lib/python3.11/site-packages/tvm_ffi/_optional_torch_c_dlpack.py:174: UserWarning: Failed to JIT torch c dlpack extension, EnvTensorAllocator will not be enabled.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m We recommend installing via `pip install torch-c-dlpack-ext`
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   warnings.warn(
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:32 [cuda.py:418] Valid backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION']
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:29:32 [cuda.py:427] Using FLASH_ATTN backend.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:31:55 [weight_utils.py:441] Time spent downloading weights for Qwen/Qwen2.5-VL-72B-Instruct: 143.260979 seconds
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/38 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:   3% Completed | 1/38 [00:04<02:28,  4.02s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:   5% Completed | 2/38 [00:05<01:33,  2.61s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:   8% Completed | 3/38 [00:07<01:16,  2.17s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  11% Completed | 4/38 [00:09<01:07,  1.99s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  13% Completed | 5/38 [00:10<01:02,  1.90s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  16% Completed | 6/38 [00:12<00:58,  1.82s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  18% Completed | 7/38 [00:14<00:55,  1.79s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  21% Completed | 8/38 [00:15<00:53,  1.77s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  24% Completed | 9/38 [00:17<00:50,  1.75s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  26% Completed | 10/38 [00:19<00:48,  1.73s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  29% Completed | 11/38 [00:20<00:46,  1.73s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  32% Completed | 12/38 [00:23<00:47,  1.83s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  34% Completed | 13/38 [00:24<00:45,  1.83s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  37% Completed | 14/38 [00:26<00:44,  1.85s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  39% Completed | 15/38 [00:28<00:42,  1.84s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  42% Completed | 16/38 [00:30<00:42,  1.95s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  45% Completed | 17/38 [00:32<00:39,  1.88s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  47% Completed | 18/38 [00:34<00:36,  1.82s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  50% Completed | 19/38 [00:35<00:34,  1.80s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  53% Completed | 20/38 [00:37<00:32,  1.81s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  55% Completed | 21/38 [00:39<00:30,  1.82s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  58% Completed | 22/38 [00:41<00:28,  1.77s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  61% Completed | 23/38 [00:42<00:26,  1.75s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  63% Completed | 24/38 [00:44<00:24,  1.74s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  66% Completed | 25/38 [00:46<00:22,  1.74s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  68% Completed | 26/38 [00:48<00:20,  1.70s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  71% Completed | 27/38 [00:49<00:18,  1.71s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  74% Completed | 28/38 [00:51<00:17,  1.72s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  76% Completed | 29/38 [00:53<00:15,  1.73s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  79% Completed | 30/38 [00:54<00:13,  1.71s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  82% Completed | 31/38 [00:56<00:12,  1.72s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  84% Completed | 32/38 [00:58<00:10,  1.74s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  87% Completed | 33/38 [01:00<00:08,  1.74s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  89% Completed | 34/38 [01:01<00:06,  1.72s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  92% Completed | 35/38 [01:03<00:05,  1.71s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  95% Completed | 36/38 [01:05<00:03,  1.70s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards:  97% Completed | 37/38 [01:06<00:01,  1.52s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards: 100% Completed | 38/38 [01:07<00:00,  1.39s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Loading safetensors checkpoint shards: 100% Completed | 38/38 [01:07<00:00,  1.78s/it]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m 
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:03 [default_loader.py:314] Loading weights took 67.53 seconds
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:04 [gpu_model_runner.py:3338] Model loading took 70.8355 GiB memory and 227.508072 seconds
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:04 [gpu_model_runner.py:4088] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m /home/cwd7/.conda/envs/vial_scan/lib/python3.11/site-packages/torch/_dynamo/variables/functions.py:1692: UserWarning: Dynamo detected a call to a `functools.lru_cache`-wrapped function. Dynamo ignores the cache wrapper and directly traces the wrapped function. Silent incorrectness is only a *potential* risk, not something we have observed. Enable TORCH_LOGS="+dynamo" for a DEBUG stack trace.
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m   torch._dynamo.utils.warn_once(msg)
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:24 [backends.py:631] Using cache directory: /home/cwd7/.cache/vllm/torch_compile_cache/9e405e308b/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:24 [backends.py:647] Dynamo bytecode transform time: 17.72 s
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m [rank0]:W0226 16:33:27.319000 3797190 /nfs/roberts/project/pi_cwd7/cwd7/ycrc_conda/envs/vial_scan/lib/python3.11/site-packages/torch/_inductor/codegen/triton_combo_kernel.py:97] [0/0] ComboKernels: 1 long reduction nodes are separated
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m [rank0]:W0226 16:33:27.967000 3797190 /nfs/roberts/project/pi_cwd7/cwd7/ycrc_conda/envs/vial_scan/lib/python3.11/site-packages/torch/_inductor/codegen/triton_combo_kernel.py:97] [0/0] ComboKernels: 1 long reduction nodes are separated
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:33:28 [backends.py:251] Cache the graph for dynamic shape for later use
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m [rank0]:W0226 16:33:30.195000 3797190 /nfs/roberts/project/pi_cwd7/cwd7/ycrc_conda/envs/vial_scan/lib/python3.11/site-packages/torch/_inductor/codegen/triton_combo_kernel.py:97] [0/0] ComboKernels: 1 long reduction nodes are separated
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m [rank0]:W0226 16:33:30.411000 3797190 /nfs/roberts/project/pi_cwd7/cwd7/ycrc_conda/envs/vial_scan/lib/python3.11/site-packages/torch/_inductor/codegen/triton_combo_kernel.py:97] [0/0] ComboKernels: 1 long reduction nodes are separated
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:33 [backends.py:282] Compiling a graph for dynamic shape takes 68.32 s
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:37 [monitor.py:34] torch.compile takes 86.03 s in total
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:40 [gpu_worker.py:359] Available KV cache memory: 48.76 GiB
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:40 [kv_cache_utils.py:1229] GPU KV cache size: 159,776 tokens
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:40 [kv_cache_utils.py:1234] Maximum concurrency for 8,192 tokens per request: 19.50x
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m 2026-02-26 16:34:40,732 - INFO - autotuner.py:256 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m 2026-02-26 16:34:40,762 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process ends
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   2%|▏         | 1/51 [00:00<00:15,  3.18it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   6%|▌         | 3/51 [00:00<00:07,  6.56it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   8%|▊         | 4/51 [00:00<00:06,  7.44it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  10%|▉         | 5/51 [00:00<00:05,  7.98it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  12%|█▏        | 6/51 [00:00<00:05,  8.34it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  14%|█▎        | 7/51 [00:00<00:05,  8.46it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  16%|█▌        | 8/51 [00:01<00:05,  8.49it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  18%|█▊        | 9/51 [00:01<00:04,  8.60it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  20%|█▉        | 10/51 [00:01<00:04,  8.64it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  22%|██▏       | 11/51 [00:01<00:04,  8.62it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▎       | 12/51 [00:01<00:04,  8.59it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  25%|██▌       | 13/51 [00:01<00:04,  8.22it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  27%|██▋       | 14/51 [00:01<00:04,  8.23it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  29%|██▉       | 15/51 [00:01<00:04,  8.14it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 16/51 [00:02<00:04,  8.06it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  35%|███▌      | 18/51 [00:02<00:03,  9.99it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  39%|███▉      | 20/51 [00:02<00:02, 11.25it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  43%|████▎     | 22/51 [00:02<00:02, 11.93it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  47%|████▋     | 24/51 [00:02<00:02, 12.24it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  51%|█████     | 26/51 [00:02<00:02, 12.31it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  55%|█████▍    | 28/51 [00:02<00:01, 12.19it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  59%|█████▉    | 30/51 [00:03<00:01, 11.62it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 32/51 [00:03<00:01, 11.47it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  67%|██████▋   | 34/51 [00:03<00:01, 12.25it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  71%|███████   | 36/51 [00:03<00:01, 12.83it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  75%|███████▍  | 38/51 [00:03<00:01, 11.73it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  78%|███████▊  | 40/51 [00:03<00:00, 12.25it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  82%|████████▏ | 42/51 [00:04<00:00, 12.80it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  86%|████████▋ | 44/51 [00:04<00:00, 13.17it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  90%|█████████ | 46/51 [00:04<00:00, 13.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  94%|█████████▍| 48/51 [00:04<00:00, 13.63it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  98%|█████████▊| 50/51 [00:04<00:00, 13.66it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 51/51 [00:04<00:00, 10.74it/s]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m Capturing CUDA graphs (decode, FULL):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):   2%|▏         | 1/51 [00:00<00:06,  7.19it/s]Capturing CUDA graphs (decode, FULL):   6%|▌         | 3/51 [00:00<00:05,  9.09it/s]Capturing CUDA graphs (decode, FULL):   8%|▊         | 4/51 [00:00<00:05,  9.37it/s]Capturing CUDA graphs (decode, FULL):  10%|▉         | 5/51 [00:00<00:04,  9.41it/s]Capturing CUDA graphs (decode, FULL):  12%|█▏        | 6/51 [00:00<00:04,  9.32it/s]Capturing CUDA graphs (decode, FULL):  14%|█▎        | 7/51 [00:00<00:04,  9.23it/s]Capturing CUDA graphs (decode, FULL):  16%|█▌        | 8/51 [00:00<00:04,  9.12it/s]Capturing CUDA graphs (decode, FULL):  18%|█▊        | 9/51 [00:00<00:04,  9.12it/s]Capturing CUDA graphs (decode, FULL):  20%|█▉        | 10/51 [00:01<00:04,  9.10it/s]Capturing CUDA graphs (decode, FULL):  22%|██▏       | 11/51 [00:01<00:04,  9.02it/s]Capturing CUDA graphs (decode, FULL):  24%|██▎       | 12/51 [00:01<00:04,  8.97it/s]Capturing CUDA graphs (decode, FULL):  25%|██▌       | 13/51 [00:01<00:04,  8.86it/s]Capturing CUDA graphs (decode, FULL):  27%|██▋       | 14/51 [00:01<00:04,  8.67it/s]Capturing CUDA graphs (decode, FULL):  29%|██▉       | 15/51 [00:01<00:04,  8.66it/s]Capturing CUDA graphs (decode, FULL):  31%|███▏      | 16/51 [00:01<00:04,  8.57it/s]Capturing CUDA graphs (decode, FULL):  35%|███▌      | 18/51 [00:01<00:03, 10.77it/s]Capturing CUDA graphs (decode, FULL):  39%|███▉      | 20/51 [00:02<00:02, 12.22it/s]Capturing CUDA graphs (decode, FULL):  43%|████▎     | 22/51 [00:02<00:02, 13.14it/s]Capturing CUDA graphs (decode, FULL):  47%|████▋     | 24/51 [00:02<00:02, 11.88it/s]Capturing CUDA graphs (decode, FULL):  51%|█████     | 26/51 [00:02<00:01, 12.62it/s]Capturing CUDA graphs (decode, FULL):  55%|█████▍    | 28/51 [00:02<00:01, 13.07it/s]Capturing CUDA graphs (decode, FULL):  59%|█████▉    | 30/51 [00:02<00:01, 13.20it/s]Capturing CUDA graphs (decode, FULL):  63%|██████▎   | 32/51 [00:02<00:01, 13.21it/s]Capturing CUDA graphs (decode, FULL):  67%|██████▋   | 34/51 [00:03<00:01, 14.32it/s]Capturing CUDA graphs (decode, FULL):  71%|███████   | 36/51 [00:03<00:00, 15.47it/s]Capturing CUDA graphs (decode, FULL):  75%|███████▍  | 38/51 [00:03<00:00, 16.28it/s]Capturing CUDA graphs (decode, FULL):  78%|███████▊  | 40/51 [00:03<00:00, 16.83it/s]Capturing CUDA graphs (decode, FULL):  82%|████████▏ | 42/51 [00:03<00:00, 17.58it/s]Capturing CUDA graphs (decode, FULL):  86%|████████▋ | 44/51 [00:03<00:00, 18.19it/s]Capturing CUDA graphs (decode, FULL):  90%|█████████ | 46/51 [00:03<00:00, 18.30it/s]Capturing CUDA graphs (decode, FULL):  96%|█████████▌| 49/51 [00:03<00:00, 19.34it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 51/51 [00:03<00:00, 12.91it/s]
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:50 [gpu_model_runner.py:4244] Graph capturing finished in 10 secs, took -0.17 GiB
+[1;36m(EngineCore_DP0 pid=3797190)[0;0m INFO 02-26 16:34:50 [core.py:250] init engine (profile, create kv cache, warmup model) took 106.26 seconds
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:51 [api_server.py:1725] Supported tasks: ['generate']
+[1;36m(APIServer pid=3797136)[0;0m WARNING 02-26 16:34:52 [model.py:1568] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [serving_responses.py:154] Using default chat sampling params from model: {'repetition_penalty': 1.05, 'temperature': 1e-06}
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [serving_chat.py:131] Using default chat sampling params from model: {'repetition_penalty': 1.05, 'temperature': 1e-06}
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [serving_completion.py:73] Using default completion sampling params from model: {'repetition_penalty': 1.05, 'temperature': 1e-06}
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [serving_chat.py:131] Using default chat sampling params from model: {'repetition_penalty': 1.05, 'temperature': 1e-06}
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [api_server.py:2052] Starting vLLM API server 0 on http://0.0.0.0:8000
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:38] Available routes are:
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /health, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /load, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /tokenize, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /detokenize, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/models, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /version, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/responses, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/messages, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/completions, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/embeddings, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /pooling, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /classify, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /score, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/score, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/audio/transcriptions, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/audio/translations, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /rerank, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v1/rerank, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /v2/rerank, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /ping, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /ping, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /invocations, Methods: POST
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:34:52 [launcher.py:46] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=3797136)[0;0m INFO:     Started server process [3797136]
+[1;36m(APIServer pid=3797136)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=3797136)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52020 - "GET /health HTTP/1.1" 200 OK
+vLLM ready after 37x10s
+[1;36m(APIServer pid=3797136)[0;0m The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+[1;36m(APIServer pid=3797136)[0;0m INFO 02-26 16:35:00 [chat_utils.py:557] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this.
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52034 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+Found 7 images. Starting extraction...
+2026-02-26 16:35:09,590 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52050 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:09,768 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52032 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:09,792 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52022 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:09,922 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52036 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:10,183 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52066 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:10,208 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52080 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:10,333 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52050 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+2026-02-26 16:35:12,900 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:12,901 INFO Processed 1/7: images/test/DunnLab000201.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52022 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1/7] images/test/DunnLab000201.png
+2026-02-26 16:35:12,946 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:12,947 INFO Processed 2/7: images/test/DunnLab000199.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52034 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2/7] images/test/DunnLab000199.png
+2026-02-26 16:35:12,969 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:12,969 INFO Processed 3/7: images/test/DunnLab000203.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52080 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[3/7] images/test/DunnLab000203.png
+2026-02-26 16:35:13,221 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:13,221 INFO Processed 4/7: images/test/DunnLab000205.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52036 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[4/7] images/test/DunnLab000205.png
+2026-02-26 16:35:13,243 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:13,244 INFO Processed 5/7: images/test/DunnLab000200.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52066 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[5/7] images/test/DunnLab000200.png
+2026-02-26 16:35:13,379 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:13,379 INFO Processed 6/7: images/test/DunnLab000204.png
+[1;36m(APIServer pid=3797136)[0;0m INFO:     127.0.0.1:52032 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[6/7] images/test/DunnLab000204.png
+2026-02-26 16:35:13,669 INFO HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-26 16:35:13,669 INFO Processed 7/7: images/test/DunnLab000202.png
+[7/7] images/test/DunnLab000202.png
+Saved 7 rows to output/results.xlsx

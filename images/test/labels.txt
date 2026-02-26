@@ -1,0 +1,41 @@
+199
+#187
+D500-SS12
+NANOMIA
+pneumatophore
+
+200
+#188
+D500-SS12
+NANOMIA
+young nectos
+
+201
+#189
+D500-SS12
+NANOMIA
+mature necto
+
+202
+#191
+D500-SS12
+NANOMIA
+young female
+
+203
+#192
+D500-SS12
+NANOMIA
+young male
+
+204
+#193
+D500-SS12
+NANOMIA
+young palpons
+
+205
+#194
+D500-SS12
+Nanomia SGZ
+Siphosomal growth zone

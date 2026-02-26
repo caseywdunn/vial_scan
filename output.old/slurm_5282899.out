@@ -1,0 +1,7 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+/apps/custom/lmod/8.7.48/init/bash: line 169: conda: command not found
+Waiting for vLLM server...
+INFO 02-26 14:36:19 [scheduler.py:216] Chunked prefill is enabled with max_num_batched_tokens=2048.
+usage: vllm serve [model_tag] [options]
+vllm serve: error: argument --limit-mm-per-prompt: Value image=1 cannot be converted to <function loads at 0x151216ae6e80>.
+slurmstepd: error: *** JOB 5282899 ON a1126u11n01 CANCELLED AT 2026-02-26T14:40:45 ***

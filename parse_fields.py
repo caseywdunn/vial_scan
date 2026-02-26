@@ -32,7 +32,7 @@ Sampling event vehicle prefixes: V=Ventana, D=Doc Ricketts, T=Tiburon, W=Western
 Sampler codes: SS=suction sampler, D=detritus sampler, N=net, MC=midwater collection.
 
 Species corrections (apply these):
-- Nanomia / Nano / N bijuga → Nanomia bijuga
+- Nanomia / Nano / N bijuga / Nanomia SGZ / NANOMIA → Nanomia bijuga
 - B elongata / Bargmannia elong → Bargmannia elongata
 - Agalma / A elegans → Agalma elegans
 - Muggiaea / M atlantica → Muggiaea atlantica
@@ -42,13 +42,17 @@ Species corrections (apply these):
 - Apolemia → Apolemia sp.
 
 Tissue corrections:
-- necto / N followed by number → nectophore (record number if present, e.g. nectophore 1)
-- GZ → growth zone
+- necto / nectos / N followed by number → nectophore (record qualifier if present, e.g. "young nectophore", "mature nectophore", "nectophore 1")
+- young nectos / young necto → young nectophore
+- mature necto / mature nectos → mature nectophore
+- GZ / SGZ / siphosomal growth zone / Siphosomal GZ → siphosomal growth zone
 - gastro → gastrozooid
 - gonzo → gonozooid
-- pneu → pneumatophore
+- pneu / pneum / pneumatophore → pneumatophore
+- palpon / palpons / young palpons → palpons
 - sipho (if tissue, not species) → whole siphonophore
 - stem → stem
+- young male / young female / mature male / mature female → record as-is in tissue field (denotes developmental stage/sex)
 
 Return only the JSON object.
 """
