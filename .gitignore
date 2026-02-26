@@ -1,0 +1,14 @@
+# Raw images
+*.jpg
+*.jpeg
+*.png
+*.tif
+*.tiff
+
+# Pipeline output
+output/
+
+# Misc
+__pycache__/
+*.pyc
+.env
